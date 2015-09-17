@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+  <title>巡杆系统</title>
+  <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css"/>
+  <script src="http://webapi.amap.com/maps?v=1.3&key=b45ac2e2ac21dfacb3bc8aa814671edc"></script>
+</head>
+
+<body>
+  <div id="mapContainer"></div>
+  <!--<div id="tip" class="tip">鼠标移入点标记试试</div>-->
+  <script>
+
+  var lat = {$data.lat};
+  var lon = {$data.lon};
+  var poleName = "{$data.name}";
+
+
+  //alert("NAME :" +poleName);
+
+    map = new AMap.Map('mapContainer', {
+      resizeEnable: true,
+      center: [lon, lat],
+      zoom: 13
+    });
+
+    var marker = new AMap.Marker({
+      position: AMap.LngLat(lon,lat)
+    });
+    marker.setMap(map);
+ 
+    // 设置鼠标划过点标记显示的文字提示
+    marker.setTitle('我是地图中心点哦~');
+
+    // 设置label标签
+    marker.setLabel({
+    //label的父div默认蓝框白底右下角显示，样式className为：amap-marker-label
+        //offset:new AMap.Pixel(50,50),//修改父div相对于maker的位置
+        content:poleName
+    });
+  </script>
+</body>
+
+</html>

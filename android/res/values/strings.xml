@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">localCheck</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu">菜单</string>
+    <string name="menu_item_name_1">开始记录位置</string>
+    <string name="menu_item_name_2">停止记录位置</string>
+    <string name="menu_item_name_3">查看路线</string>
+    <string name="menu_item_name_4">取消查看路线</string>
+    <string name="menu_item_name_99">功能介绍</string>
+    
+    <string name="back">返回</string>
+    <string name="list_item_index">1</string>
+    <string name="list_item_date">2015-8-28 2:03:46</string>
+    
+    
+    <string name="path_mgr">路线管理</string>
+    <string name="hint1">点击可以在地图显示路径</string>
+    
+    
+
+</resources>
